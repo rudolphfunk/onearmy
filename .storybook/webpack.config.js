@@ -5,16 +5,18 @@ module.exports = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        //include: path.resolve(__dirname, '../src'),
+        include: [
+          path.resolve(__dirname, "../src"),
+          path.resolve(__dirname, "../.storybook")
+        ],
         use: [{
           loader: require.resolve('babel-loader'),
           options: {
             presets: [['react-app', { flow: false, typescript: true }]],
           }
-        },{
-          loader: require.resolve("react-docgen-typescript-loader")
-        }],
-        
+        },
+        require.resolve("react-docgen-typescript-loader")
+        ],
       },
     ],
   },

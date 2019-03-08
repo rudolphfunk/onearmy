@@ -15,7 +15,6 @@ addParameters({
     panelPosition: 'right',
   },
 });
-// 
 
 addDecorator(themeDecorator)
 
